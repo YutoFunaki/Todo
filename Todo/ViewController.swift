@@ -33,8 +33,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func addTodo(_ sender: Any) {
         let alertController = UIAlertController(title: "Todoを追加", message: "やることをを記入してください", preferredStyle: UIAlertController.Style.alert)
-        alartController.addTextField(configurationHandler: nil)
-        let cancelButton = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler: )
+        alertController.addTextField(configurationHandler: nil)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default){
+            (acrion: UIAlertAction) in
+            if let textField = alertController.textFields?.first {
+                self.to.insert(textField.text!, at: 0)
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.right)
+            }
+        }
+        alertController.addAction(okAction)
+        let cancelButton = UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.cancel, handler: nil)
+        alertController.addAction(cancelButton)
+        present(alertController, animated: true, completion: nil)
+        
     }
     
     

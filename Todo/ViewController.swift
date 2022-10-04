@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
     
 
     var to = [String]()
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func addTodo(_ sender: Any) {
-        let alertController = UIAlertController(title: "Todoを追加", message: "やることをを記入してください", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "追加", message: "やることをを記入してください", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField(configurationHandler: nil)
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default){
             (acrion: UIAlertAction) in

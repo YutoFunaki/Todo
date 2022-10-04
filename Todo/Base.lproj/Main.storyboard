@@ -49,30 +49,16 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rhH-AN-cuk">
                             <connections>
                                 <action selector="addTodo:" destination="BYZ-38-t0r" id="iqD-3i-ZIQ"/>
-                                <segue destination="lCF-vz-j7d" kind="show" id="bxF-c3-aaP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="qnL-er-jrr" id="04K-F3-Jjz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1880" y="3.5545023696682461"/>
-        </scene>
-        <!--追加-->
-        <scene sceneID="19H-Tk-MPg">
-            <objects>
-                <viewController id="lCF-vz-j7d" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gif-yd-qbK">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0jd-M8-I3o"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="追加" id="PQ2-BB-R7L"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JOJ-Lb-7d4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3111" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JYg-hR-wOd">
@@ -120,9 +106,6 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
